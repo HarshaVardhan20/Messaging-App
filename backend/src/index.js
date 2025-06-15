@@ -13,12 +13,8 @@ import { app, server } from "./lib/socket.js";
 
 dotenv.config();
 
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT;
 const __dirname = path.resolve();
-console.log(PORT);
-if(!PORT){
-    throw new Error("Port is not defined in environmental variables");
-}
 
 app.use(express.json());
 app.use(cookieParser());
